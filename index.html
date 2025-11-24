@@ -1,13 +1,71 @@
-cat > index.html << 'EOF'
 <!DOCTYPE html>
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
     <title>Digitální zpěvník</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #0f172a;
+        color: #e5e7eb;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        background: #020617;
+        border-radius: 16px;
+        padding: 32px 40px;
+        box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.7);
+        max-width: 480px;
+        text-align: center;
+      }
+      h1 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.9rem;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: #9ca3af;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.7rem 1.6rem;
+        border-radius: 999px;
+        border: none;
+        background: #22c55e;
+        color: #022c22;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background: #16a34a;
+      }
+      .note {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        color: #6b7280;
+      }
+    </style>
   </head>
   <body>
-    <h1>Digitální zpěvník – frontend</h1>
-    <p>Pokud tohle vidíš na adrese <strong>digizpevnik.github.io</strong>, GitHub Pages jede 🎉</p>
+    <main class="card">
+      <h1>Digitální zpěvník</h1>
+      <p>Webová aplikace pro nahrávání a prohlížení fotek zpěvníku.</p>
+      <p>Po přihlášení si můžeš vytvářet vlastní kolekce, nahrávat stránky a pohodlně je procházet.</p>
+      <a class="btn" href="http://92.5.116.155" target="_blank" rel="noopener">
+        Otevřít aplikaci
+      </a>
+      <div class="note">
+        Běží na testovacím serveru – první načtení může chvíli trvat.
+      </div>
+    </main>
   </body>
 </html>
-EOF
